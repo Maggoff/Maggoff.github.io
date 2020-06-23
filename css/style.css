@@ -1,0 +1,11 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+.header{
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
