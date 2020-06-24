@@ -79,6 +79,10 @@ ul, li{
     margin-bottom: 10px;
 }
 
+.about__descr__item:last-child{
+    margin-bottom: 0;
+}
+
 .about__descr__title{
     font-size: 18px;
     font-weight: 400;
@@ -115,7 +119,8 @@ ul, li{
 
 .about__educations__foto{
     width: 15%;
-    height: 7vw;
+    display: flex;
+    align-items: center;
     border-right: 1px solid #000000;
     background-color: #ffffff;
     border-top-left-radius: 10px;
@@ -229,24 +234,219 @@ ul, li{
 
 /* Footer */
 
-    .footer{
-        background-color: #ebffa1;
+.footer{
+    background-color: #ebffa1;
+}
+
+.footer__inner{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__contact{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer__contact:hover{
+    color: #8ea634;
+}
+
+/* END Footer */
+
+/* Adapt 1100px */
+
+@media (max-width: 1100px){
+
+    .container{
+        margin: 0 5%;
+    }
+
+    .about__descr{
+        padding: 20px 10px;
+    }
+
+}
+
+/* END Adapt 1100px*/
+
+/* Adapt 850px */
+
+@media (max-width: 850px){
+
+    .about__descr{
+        padding: 20px 30px;
+    }
+
+    .about__descr__item{
+        flex-direction: column;
+    }
+
+    .about__descr__title{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .about__descr__info{
+        width: 100%;
+    }
+
+}
+
+/* END Adapt 850px*/
+
+/* Adapt 700px */
+
+@media (max-width: 700px){
+
+    .about__inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about__info{
+        width: 60%;
+    }
+
+    .about__img{
+        height: 45vw;
+    }
+
+    .about__descr__item{
+        flex-direction: row;
+    }
+
+    .about__descr__title{
+        width: 50%;
+        margin-bottom: 0;
+    }
+    
+    .about__descr__info{
+        width: 50%;
+    }
+
+    .about__educations{
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .about__educations__title{
+        text-align: center;
+    }
+
+    .about__educations__img{
+        height: 13vw;
+    }
+
+    .portfolio__items{
+        flex-direction: column;
+    }
+
+    .portfolio__item{
+        width: 100%;
+        margin-bottom: 4vw;
+    }
+
+    .portfolio__item:last-child{
+        margin-bottom: 0;
+    }
+
+    .portfolio__img{
+        height: 42vw;
+    }
+
+}
+
+/* END Adapt 700px */
+
+/* Adapt 550px */
+
+@media (max-width: 550px){
+
+    .header__title{
+        font-size: 35px;
+    }
+
+}
+
+/* END Adapt 550px */
+
+/* Adapt 500px */
+
+@media (max-width: 550px){
+
+    .about__descr__item{
+        flex-direction: column;
+    }
+
+    .about__descr__title{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .about__descr__info{
+        width: 100%;
+    }
+
+}
+
+/* END Adapt 500px */
+
+/* Adapt 450px */
+
+@media (max-width: 450px){
+
+    .header__title{
+        font-size: 30px;
+    }
+
+    .about__educations__info__title{
+        font-size: 19px;
+    }
+
+}
+
+/* END Adapt 450px */
+
+/* Adapt 400px */
+
+@media (max-width: 400px){
+
+    .header__title{
+        font-size: 25px;
+    }
+
+    .about__educations__info__title{
+        font-size: 18px;
     }
 
     .footer__inner{
-        padding: 30px 0;
-        display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
     }
 
     .footer__contact{
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 20px;
+        margin-bottom: 10px;
     }
 
-    .footer__contact:hover{
-        color: #8ea634;
+    .footer__contact:last-child{
+        margin-bottom: 0;
     }
 
-/* END Footer */
+}
+
+/* END Adapt 400px */
+
+/* Adapt 320px */
+
+@media (max-width: 320px){
+
+    .header__title{
+        font-size: 23px;
+    }
+
+}
+
+/* END Adapt 320px */
