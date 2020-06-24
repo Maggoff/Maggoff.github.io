@@ -2,10 +2,35 @@
 *::after,
 *::before{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #10003a;
+}
+
+ul, li{
+    list-style: none;
 }
 
 .header{
+    background-color: #ebffa1;
+    height: 90px;
+}
+
+.container{
     margin: 0 10%;
-    display: flex;
-    justify-content: space-between;
+}
+
+.header__inner{
+    padding: 25px 0;
+    text-align: center;
+}
+
+.header__title{
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
 }
