@@ -340,6 +340,10 @@ ul, li{
         height: 13vw;
     }
 
+    .about__educations__info{
+        padding: 10px 3%;
+    }
+
     .portfolio__items{
         flex-direction: column;
     }
