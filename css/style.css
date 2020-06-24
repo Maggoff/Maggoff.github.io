@@ -226,3 +226,27 @@ ul, li{
 }
 
 /* END Portfolio */
+
+/* Footer */
+
+    .footer{
+        background-color: #ebffa1;
+    }
+
+    .footer__inner{
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .footer__contact{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .footer__contact:hover{
+        color: #8ea634;
+    }
+
+/* END Footer */
