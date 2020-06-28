@@ -146,7 +146,7 @@ body *{
 }
 
 .about__educations__info__title:hover{
-    color: #00aeff;
+    color: #897cff;
     text-decoration: underline;
 }
 
@@ -224,7 +224,7 @@ body *{
 }
 
 .portfolio__name:hover{
-    color: #00aeff;
+    color: #897cff;
     text-decoration: underline;
 }
 
@@ -255,7 +255,7 @@ body *{
 }
 
 .footer__contact:hover{
-    color: #00aeff;
+    color: #897cff;
 }
 
 /* END Footer */
