@@ -9,7 +9,7 @@
 
 a{
     text-decoration: none;
-    color: #000000;
+    color: #df4949;
     display: inline-block;
 }
 
@@ -17,12 +17,16 @@ ul, li{
     list-style: none;
 }
 
+body{
+    color: #df4949;
+}
+
 /* Header */
 
 .header{
-    background-color: #fff9a1;
+    background-color: #0a0404;
     height: 90px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 3px solid #ff0000;
 }
 
 .container{
@@ -45,8 +49,8 @@ ul, li{
 /* About */
 
 .about{
-    background-color: #ebffa1;
-    border-bottom: 1px solid #000000;
+    background-color: #0a0404;
+    border-bottom: 3px solid #ff0000;
 }
 
 .about__inner{
@@ -57,17 +61,15 @@ ul, li{
 
 .about__info{
     width: 30%;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    background-color: #fff9a1;
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+    background-color: #3f3e38;
 }
 
 .about__img{
     width: 100%;
     height: 23vw;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ff0000;
 }
 
 .about__descr{
@@ -108,9 +110,9 @@ ul, li{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    background-color: #fff9a1;
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+    background-color: #3f3e38;
 }
 
 .about__educations__item:last-child{
@@ -121,17 +123,12 @@ ul, li{
     width: 15%;
     display: flex;
     align-items: center;
-    border-right: 1px solid #000000;
     background-color: #ffffff;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .about__educations__img{
     width: 100%;
     height: 7vw;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .about__educations__info{
@@ -147,7 +144,7 @@ ul, li{
 }
 
 .about__educations__info__title:hover{
-    color: #8ea634;
+    color: #ff0000;
     text-decoration: underline;
 }
 
@@ -162,8 +159,8 @@ ul, li{
 /* Portfolio */
 
 .portfolio{
-    background-color: #fff9a1;
-    border-bottom: 1px solid #000000;
+    background-color: #0a0404;
+    border-bottom: 3px solid #ff0000;
 }
 
 .portfolio__inner{
@@ -178,21 +175,18 @@ ul, li{
 }
 
 .portfolio__items{
-    margin-bottom: 4vw;
     display: flex;
     justify-content: space-between;
-}
-
-.portfolio__items:last-child{
-    margin-bottom: 0;
+    flex-wrap: wrap;
 }
 
 .portfolio__item{
     width: 30%;
     text-align: center;
-    background-color: #ebffa1;
-    border-radius: 10px;
-    border: 1px solid #000000;
+    background-color: #3f3e38;
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+    margin-bottom: 4vw;
 }
 
 .portfolio__foto{
@@ -203,9 +197,7 @@ ul, li{
 .portfolio__img{
     width: 100%;
     height: 12vw;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ff0000;
 }
 
 .portfolio__info{
@@ -220,7 +212,7 @@ ul, li{
 }
 
 .portfolio__name:hover{
-    color: #8ea634;
+    color: #ff0000;
     text-decoration: underline;
 }
 
@@ -235,7 +227,7 @@ ul, li{
 /* Footer */
 
 .footer{
-    background-color: #ebffa1;
+    background-color: #0a0404;
 }
 
 .footer__inner{
@@ -251,7 +243,7 @@ ul, li{
 }
 
 .footer__contact:hover{
-    color: #8ea634;
+    color: #ff0000;
 }
 
 /* END Footer */
@@ -307,11 +299,18 @@ ul, li{
     }
     
     .about__info{
-        width: 60%;
+        width: 100%;
+        display: flex;
     }
 
     .about__img{
-        height: 45vw;
+        width: 35%;
+        height: 100%;
+        border: none;
+    }
+
+    .about__descr{
+        width: 65%;
     }
 
     .about__descr__item{
@@ -379,7 +378,16 @@ ul, li{
 
 /* Adapt 500px */
 
-@media (max-width: 550px){
+@media (max-width: 500px){
+
+    .about__img{
+        width: 50%;
+        align-self: center;
+    }
+
+    .about__descr{
+        width: 50%;
+    }
 
     .about__descr__item{
         flex-direction: column;
@@ -420,6 +428,10 @@ ul, li{
 
     .header__title{
         font-size: 25px;
+    }
+
+    .about__descr{
+        padding: 20px 15px;
     }
 
     .about__educations__info__title{
