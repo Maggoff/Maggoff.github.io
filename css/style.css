@@ -185,7 +185,7 @@ body *{
 .portfolio__items::after{
     content: "";
     flex: auto;
-  }
+}
 
 .portfolio__item{
     position: relative;
@@ -439,6 +439,7 @@ span:nth-child(4){
 
     .portfolio__item:last-child{
         margin-bottom: 0;
+        margin-left: 0;
     }
 
     .portfolio__img{
