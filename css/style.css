@@ -181,11 +181,11 @@ body *{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+/*
 .portfolio__items::after{
     content: "";
     flex: auto;
-}
+}*/
 
 .portfolio__item{
     position: relative;
@@ -196,10 +196,10 @@ body *{
     border-bottom: 1px solid #1900ff;
     margin-bottom: 4vw;
 }
-
+/*
 .portfolio__item:last-child{
     margin-left: 5%;
-}
+}*/
 
 .portfolio__foto{
     width: 100%;
