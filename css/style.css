@@ -258,6 +258,10 @@ body *{
     color: #897cff;
 }
 
+.anime{
+    display: none;
+}
+
 /* END Footer */
 
 /* span */
@@ -335,6 +339,12 @@ span:nth-child(4){
 }
 
 /* END span */
+
+@media (width: 1337px){
+    .anime{
+        display: inline-block;
+    }
+}
 
 /* Adapt 1100px */
 
