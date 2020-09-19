@@ -68,13 +68,13 @@ body{
   padding-bottom: 5vw;
 }
 
-.portfolio{
+.main{
   display: flex;
   height: 100%;
   font-family: 'Jura', sans-serif;
 }
 
-.portfolio__left{
+.main__left{
   width: 50%;
   height: 100%;
   display: flex;
@@ -82,7 +82,7 @@ body{
   align-items: center;
 }
 
-.portfolio__left__border{
+.main__left__border{
   width: 50%;
   height: 60%;
   border: 1px solid #1e715d;
@@ -90,7 +90,15 @@ body{
   margin-bottom: 15%;
 }
 
-.portfolio__left__border__box{
+.main__left__border__img{
+  position: absolute;
+  z-index: 2;
+  width: 88.5%;
+  right: 0;
+  bottom: -18.5%;
+}
+
+.main__left__border__box{
   position: absolute;
   right: -20%;
   bottom: 26%;
@@ -104,7 +112,7 @@ body{
   user-select: none;
 }
 
-.portfolio__right{
+.main__right{
   width: 50%;
   height: 100%;
   display: flex;
@@ -113,7 +121,7 @@ body{
   align-items: center;
 }
 
-.portfolio__right__title{
+.main__right__title{
   font-size: 64px;
   line-height: 76px;
   font-weight: 700;
@@ -121,7 +129,7 @@ body{
   color: #ffffff;
 }
 
-.portfolio__right__text{
+.main__right__text{
   font-size: 36px;
   line-height: 50px;
   font-weight: 700;
@@ -130,14 +138,14 @@ body{
   margin: 30px 0;
 }
 
-.portfolio__right__btn{
+.main__right__btn{
   padding: 5x;
   border: 4px solid #1e715d;
   background-color: #1e715d;
   text-decoration: none;
 }
 
-.portfolio__right__btn__box{
+.main__right__btn__box{
   font-size: 16px;
   line-height: 19px;
   font-weight: 700;
@@ -150,9 +158,94 @@ body{
   transition: 0.4s;
 }
 
-.portfolio__right__btn:hover .portfolio__right__btn__box{
+.main__right__btn:hover .main__right__btn__box{
   color: #ffffff;
   background-color: #040404;
+}
+
+.portfolio{
+  display: flex;
+  font-family: 'Jura', sans-serif;
+  height: 100%;
+}
+
+.portfolio__item{
+  width: 33.4%;
+  position: relative;
+  height: 100%;
+  border: 1px solid #1e715d;
+  transition: 0.4s;
+}
+
+.portfolio__item__title{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #000000;
+  transition: 0.4s;
+}
+
+.portfolio__item:hover .portfolio__item__title{
+  background-color: #1e715d;
+}
+
+.portfolio__item__img{
+  width: 100%;
+}
+
+.portfolio__item__list{
+  list-style: none;
+  color: #ffffff;
+  padding: 25px;
+}
+
+.portfolio__item__list__item{
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.portfolio__item__list__item i{
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.portfolio__item__btns{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  left: 0;
+  bottom: 0;
+}
+
+.portfolio__item__btn{
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 50%;
+  padding: 14px 0;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid #1e715d;
+  border-right: 1px solid #1e715d;
+  transition: 0.4s;
+}
+
+.portfolio__item__btn:last-child{
+  border-right: none;
+}
+
+.portfolio__item__btn:hover{
+  background-color: #1e715d;
 }
 
 .skills{
@@ -302,13 +395,16 @@ body{
   background-color: transparent;
 }
 
-.footer{
+.footer,
+#fp-nav.fp-right{
   position: absolute;
   left: 0;
+  right: 0;
+  top: auto;
+  transform: none;
   bottom: 0;
   width: 100%;
   height: 5vw;
-  padding-left: 5vw;
   border-top: 1px solid #1e715d;
   background-color: #040404;
   display: flex;
@@ -316,9 +412,59 @@ body{
   font-family: 'Jura', sans-serif;
 }
 
+.footer{
+  width: 31.6%;
+  margin-left: 5vw;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+#fp-nav .footer{
+  width: 100%;
+}
+
+#fp-nav ul li,
 .footer__btn{
+  margin: 0;
+  height: 100%;
   width: 33.4%;
   border-right: 1px solid #1e715d;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  transition: 0.4s;
+  position: relative;
+}
+
+.footer__btn{
+  z-index: 5;
+  width: 100%;
+}
+
+.footer__btn:hover{
+  background-color: #1e715d;
+}
+
+#fp-nav ul li:first-child{
+  width: 5.25%;
+}
+
+#fp-nav ul li:last-child{
+  border-right: none;
+}
+
+.footer__btn:last-child{
+  border: none;
+}
+
+.footer__btn a{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,10 +477,69 @@ body{
   transition: 0.4s;
 }
 
-.footer__btn:last-child{
-  border: none;
+.footer__btn a:hover{
+  background-color: #1e715d;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.4s;
 }
 
-.footer__btn:hover{
+#fp-nav ul li a{
+  display: flex;
+  z-index: 2;
+}
+
+.footer__btn a.active{
   background-color: #1e715d;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.fp-controlArrow.fp-prev,
+.fp-controlArrow.fp-next{
+  display: none;
+}
+
+.footer__btn a .fp-controlArrow.fp-prev.visible,
+.footer__btn .fp-controlArrow.fp-prev.visible{
+  display: block;
+  border-width: 1vw 1vw 1vw 0;
+  border-color: transparent;
+  transition: 0.4s;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5vw;
+  position: absolute;
+}
+
+.footer__btn a .fp-controlArrow.fp-next.visible,
+.footer__btn .fp-controlArrow.fp-next.visible{
+  display: block;
+  border-width: 1vw 0 1vw 1vw;
+  border-color: transparent;
+  transition: 0.4s;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5vw;
+  position: absolute;
+}
+
+.footer__btn a.active .fp-controlArrow.fp-prev.visible{
+  border-color: transparent #ffffff transparent;
+  z-index: 1;
+}
+
+.footer__btn a.active .fp-controlArrow.fp-next.visible{
+  border-color: transparent #ffffff transparent;
+  z-index: 1;
+}
+
+.footer__btn:hover .fp-controlArrow.fp-prev.visible,
+.footer__btn:hover .fp-controlArrow.fp-next.visible{
+  border-color: transparent #ffffff transparent;
 }
