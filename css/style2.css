@@ -285,14 +285,15 @@ body{
   background-color: #1e715d;
 }
 
-.contact__item i{
-  font-size: 150px;
-  color: #1e715d;
+.img__svg{
+  width: 30%;
+  height: 150px;
+  fill: #1e715d;
   transition: 0.4s;
 }
 
-.contact__item:hover i{
-  color: #ffffff;
+.contact__item:hover .img__svg{
+  fill: #ffffff;
 }
 
 .contact__item__text{
