@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Мар'ян Бовтач — Front-End розробник</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="alternate" hreflang="en" href="https://maggoff.github.io/">
 <link rel="alternate" hreflang="uk" href="https://maggoff.github.io/ua.html">
 <meta name="description" content="Портфоліо Мар'яна Бовтача, Front-End розробника: проєкти на HTML, CSS, JavaScript і WordPress для медіа, культури, туризму та бізнесу.">
@@ -43,7 +46,11 @@ h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.1
 .top nav a:hover{color:var(--accent)}
 .top nav a.lang{font-family:var(--f-mono);font-size:12px;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
 .top nav a.lang:hover{border-color:var(--accent);color:var(--accent)}
-.mark{font-family:var(--f-mono);font-size:13px}
+.mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.mark svg{flex:none;display:block}
+.mark rect{fill:var(--accent)}
+.mark path{fill:none;stroke:var(--paper);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
+.mark:hover span{color:var(--accent)}
 
 /* hero */
 .hero{padding-block:56px 64px;border-bottom:1px solid var(--line);display:grid;gap:28px}
@@ -62,12 +69,6 @@ section{padding-block:64px;border-bottom:1px solid var(--line)}
 .sec-head h2{font-size:clamp(26px,4vw,38px);font-weight:500}
 .sec-head p{margin:6px 0 0;color:var(--muted);max-width:52ch}
 
-/* filters */
-.filters{display:flex;flex-wrap:wrap;gap:8px}
-.filters button{font:500 13px var(--f-body);padding:7px 14px;border-radius:999px;border:1px solid var(--line);
-  background:transparent;color:var(--ink);cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.filters button:hover{border-color:var(--accent)}
 
 /* featured rows */
 .cases{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -131,8 +132,9 @@ section{padding-block:64px;border-bottom:1px solid var(--line)}
   .hero{padding-block:36px 48px}
   section{padding-block:48px}
 }
+/* hover transitions */
+.top nav a,.mark span,.visit,.site .dom,.line .val{transition:color .2s ease,border-color .2s ease,background-color .2s ease,text-decoration-color .2s ease}
 @media (prefers-reduced-motion:no-preference){
-  .visit,.filters button,.site .dom{transition:color .15s,border-color .15s,background .15s}
   .shot img{transition:transform .4s ease}
   .shot:hover img{transform:scale(1.02)}
 }
@@ -142,7 +144,7 @@ section{padding-block:64px;border-bottom:1px solid var(--line)}
 
 <div class="wrap">
   <header class="top">
-    <span class="mark">marian.bovtach</span>
+    <a class="mark" href="ua.html"><svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true"><rect width="64" height="64" rx="14"/><path d="M12 44V20l8 12 8-12v24M37 20v24h8.5a6 6 0 0 0 0-12H37h7.5a6 6 0 0 0 0-12z"/></svg><span>Мар'ян Бовтач</span></a>
     <nav aria-label="Розділи">
       <a href="#work">Роботи</a><a href="#more">Інші сайти</a><a href="#experience">Досвід</a><a href="#contact">Контакти</a><a class="lang" href="./" hreflang="en" lang="en">EN</a>
     </nav>
